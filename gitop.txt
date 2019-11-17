@@ -8,6 +8,14 @@
 6.添加修改-》添加到暂存区：git add 文件名。每一次修改之后都要git add,先对文件进行保存再add
 7.暂存区-》版本库：git commit -m "注释说明"
 8.git status   查看状态
-9.git checkout --文件名
+9.git checkout --文件名    其实是用版本库里面的版本替换工作区的
    --文件在本地修改并且保存下来，但是未添加到暂存区；
    --文件在添加到暂存区之后，又做出了修改，修改未添加到暂存区；文件内容回退到和添加到暂存区之后的状态
+10.git reset HEAD 文件名将暂存区的修改撤销掉
+远程仓库：
+1.可以从远程clone远程库，也可以把一个已有的本地仓库与之关联。关联本地仓库步骤如下;
+1.git remote add origin git@github.com:用户名/仓库名     其中远程库的名字就是origin
+2.git pull origin master --allow-unrelated-histories  当提示了remote contains the work you dont have locally
+3.git push -u origin master   将本地库的所有内容推送到远程库上
+
+
