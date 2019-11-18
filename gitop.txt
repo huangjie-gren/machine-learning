@@ -27,4 +27,9 @@ git clone git@github.com:用户名/仓库名.git    使用https速度慢并且�
 4.git merge dev  把dev分支的工作成果合并到当前的master分支上
 5.git branch -d dev  删除dev分支
 
-解决分支冲突
+分支管理策略：
+1.git checkout -b dev  新建分支
+2.git add 文件
+3.git checkout master   切换回主分支
+4.git merge --no-ff -m "描述" dev  --no-ff 表示禁止使用快速
+5.git log --graph --pretty=oneline --abbrev-commit
